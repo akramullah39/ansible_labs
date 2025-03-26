@@ -1,0 +1,6 @@
+---
+- name: demo ansible playbook
+  hosts: all
+  remote_user: vagrant
+  roles:
+    - python
