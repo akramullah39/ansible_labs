@@ -1,0 +1,22 @@
+---
+- name: Unistall Nginx and remove config files
+  apt: 
+    name: nginx
+    state: absent
+    purge: yes
+
+
+- name: Removes Nginx dependencies and unused packages
+  become: yes
+  apt:
+    autoremove: yes
+    purge: yes
+
+
+## Update the content on the website.
+
+    #- name: updated.html copy
+    #  template: src=updated.html dest=/usr/share/nginx/html/index.html
+    #  notify: 
+    #    - Restart Nginx 
+      

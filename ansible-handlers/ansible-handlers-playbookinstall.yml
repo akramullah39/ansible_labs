@@ -1,0 +1,13 @@
+---
+- name: Demo playbook for demonstrating handlers
+  hosts: all
+  become: yes
+  remote_user: vagrant
+  roles:
+    - handlers
+
+  handlers:
+    - name: Restart Nginx
+      service:
+              name: nginx
+              state: restarted      

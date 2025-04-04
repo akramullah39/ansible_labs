@@ -1,0 +1,13 @@
+---
+- name: Uninstalling Nginx from remote machine
+  hosts: all
+  become: yes
+  remote_user: vagrant
+  roles:
+    - handlers
+
+      #  handlers:
+      #    - name: Restart Nginx
+      #      service:
+      #              name: nginx
+      #              state: restarted      
